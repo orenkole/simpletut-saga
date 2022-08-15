@@ -8,13 +8,13 @@ function App() {
     <div className="App">
       <div className="main">
         <Routes>
-          <Route path="/" render={() => (
-            <MainLayout>
+          <Route path="/" element={(
+            <MainLayout >
               <Homepage />
             </MainLayout>
           )} />
-          <Route path="/registration" render={() => (
-            <MainLayout>
+          <Route path="/registration" element={(
+            <MainLayout >
               <Registration />
             </MainLayout>
           )} />
