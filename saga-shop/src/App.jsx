@@ -1,12 +1,24 @@
-import Header from "./components/Header";
 import Homepage from "./pages/Homepage";
+import Registration from "./pages/Registration";
+import {Route, Routes} from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <div className="main">
-        <Homepage />
+        <Routes>
+          <Route path="/" render={() => (
+            <MainLayout>
+              <Homepage />
+            </MainLayout>
+          )} />
+          <Route path="/registration" render={() => (
+            <MainLayout>
+              <Registration />
+            </MainLayout>
+          )} />
+        </Routes>
       </div>
     </div>
   );
